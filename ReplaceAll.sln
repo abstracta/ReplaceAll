@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplaceAll_4.0", "ReplaceAll_4.0\ReplaceAll_4.0.csproj", "{EC12D9CF-4A20-4023-BD30-6308F155959D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplaceAll_4.5", "ReplaceAll_4.5\ReplaceAll_4.5.csproj", "{0D81ABDD-F0B6-4421-9762-AAA47C4A5DD1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC12D9CF-4A20-4023-BD30-6308F155959D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC12D9CF-4A20-4023-BD30-6308F155959D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC12D9CF-4A20-4023-BD30-6308F155959D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC12D9CF-4A20-4023-BD30-6308F155959D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D81ABDD-F0B6-4421-9762-AAA47C4A5DD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D81ABDD-F0B6-4421-9762-AAA47C4A5DD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D81ABDD-F0B6-4421-9762-AAA47C4A5DD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D81ABDD-F0B6-4421-9762-AAA47C4A5DD1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{52D15BD8-EBD3-440F-AAF1-6806FA89CC0B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Abstracta.ReplaceAll</RootNamespace>
+    <AssemblyName>Abstracta.ReplaceAll_NET4.0</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\ReplaceAll_4.5\Replacer.cs">
+      <Link>Replacer.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Attributes\AssemblyLicenseAttribute.cs">
+      <Link>CommandLine\Attributes\AssemblyLicenseAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Attributes\AssemblyUsageAttribute.cs">
+      <Link>CommandLine\Attributes\AssemblyUsageAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Attributes\BaseOptionAttribute.cs">
+      <Link>CommandLine\Attributes\BaseOptionAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Attributes\HelpOptionAttribute.cs">
+      <Link>CommandLine\Attributes\HelpOptionAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Attributes\HelpVerbOptionAttribute.cs">
+      <Link>CommandLine\Attributes\HelpVerbOptionAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Attributes\MultiLineTextAttribute.cs">
+      <Link>CommandLine\Attributes\MultiLineTextAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Attributes\OptionArrayAttribute.cs">
+      <Link>CommandLine\Attributes\OptionArrayAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Attributes\OptionAttribute.cs">
+      <Link>CommandLine\Attributes\OptionAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Attributes\OptionListAttribute.cs">
+      <Link>CommandLine\Attributes\OptionListAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Attributes\ParserStateAttribute.cs">
+      <Link>CommandLine\Attributes\ParserStateAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Attributes\ValueListAttribute.cs">
+      <Link>CommandLine\Attributes\ValueListAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Attributes\ValueOptionAttribute.cs">
+      <Link>CommandLine\Attributes\ValueOptionAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Attributes\VerbOptionAttribute.cs">
+      <Link>CommandLine\Attributes\VerbOptionAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\BadOptionInfo.cs">
+      <Link>CommandLine\BadOptionInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Extensions\CharExtensions.cs">
+      <Link>CommandLine\Extensions\CharExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Extensions\StringExtensions.cs">
+      <Link>CommandLine\Extensions\StringExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\GlobalSuppressions.cs">
+      <Link>CommandLine\GlobalSuppressions.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Infrastructure\Assumes.cs">
+      <Link>CommandLine\Infrastructure\Assumes.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Infrastructure\Pair.cs">
+      <Link>CommandLine\Infrastructure\Pair.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Infrastructure\PopsicleSetter.cs">
+      <Link>CommandLine\Infrastructure\PopsicleSetter.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Infrastructure\ReflectionCache.cs">
+      <Link>CommandLine\Infrastructure\ReflectionCache.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Infrastructure\ReflectionHelper.cs">
+      <Link>CommandLine\Infrastructure\ReflectionHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Infrastructure\SR.strings.cs">
+      <Link>CommandLine\Infrastructure\SR.strings.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\IParserState.cs">
+      <Link>CommandLine\IParserState.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Parser.cs">
+      <Link>CommandLine\Parser.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\ParserException.cs">
+      <Link>CommandLine\ParserException.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\ParserSettings.cs">
+      <Link>CommandLine\ParserSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\ParserState.cs">
+      <Link>CommandLine\ParserState.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\ParsingError.cs">
+      <Link>CommandLine\ParsingError.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Parsing\ArgumentParser.cs">
+      <Link>CommandLine\Parsing\ArgumentParser.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Parsing\IArgumentEnumerator.cs">
+      <Link>CommandLine\Parsing\IArgumentEnumerator.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Parsing\LongOptionParser.cs">
+      <Link>CommandLine\Parsing\LongOptionParser.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Parsing\OneCharStringEnumerator.cs">
+      <Link>CommandLine\Parsing\OneCharStringEnumerator.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Parsing\OptionGroupParser.cs">
+      <Link>CommandLine\Parsing\OptionGroupParser.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Parsing\OptionInfo.cs">
+      <Link>CommandLine\Parsing\OptionInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Parsing\OptionMap.cs">
+      <Link>CommandLine\Parsing\OptionMap.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Parsing\PresentParserState.cs">
+      <Link>CommandLine\Parsing\PresentParserState.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Parsing\PropertyWriter.cs">
+      <Link>CommandLine\Parsing\PropertyWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Parsing\StringArrayEnumerator.cs">
+      <Link>CommandLine\Parsing\StringArrayEnumerator.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Parsing\TargetCapabilitiesExtensions.cs">
+      <Link>CommandLine\Parsing\TargetCapabilitiesExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Parsing\ValueMapper.cs">
+      <Link>CommandLine\Parsing\ValueMapper.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Text\BaseSentenceBuilder.cs">
+      <Link>CommandLine\Text\BaseSentenceBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Text\CopyrightInfo.cs">
+      <Link>CommandLine\Text\CopyrightInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Text\EnglishSentenceBuilder.cs">
+      <Link>CommandLine\Text\EnglishSentenceBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Text\FormatOptionHelpTextEventArgs.cs">
+      <Link>CommandLine\Text\FormatOptionHelpTextEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Text\HeadingInfo.cs">
+      <Link>CommandLine\Text\HeadingInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\CommandLine\Text\HelpText.cs">
+      <Link>CommandLine\Text\HelpText.cs</Link>
+    </Compile>
+    <Compile Include="..\ReplaceAll_CLI_4.5\Program.cs">
+      <Link>Program.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\ReplaceAll_CLI_4.5\CommandLine\Infrastructure\SR.tt">
+      <Link>CommandLine\Infrastructure\SR.tt</Link>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SR.strings.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\ReplaceAll_CLI_4.5\CommandLine\CustomDictionary.xml">
+      <Link>CommandLine\CustomDictionary.xml</Link>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

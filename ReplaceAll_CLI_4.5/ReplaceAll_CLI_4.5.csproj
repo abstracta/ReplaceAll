@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{55DABE94-7225-43DA-81BF-2C3934F48484}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Abstracta.ReplaceAll</RootNamespace>
+    <AssemblyName>Abstracta.ReplaceAll_NET4.5</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\ReplaceAll_4.5\Replacer.cs">
+      <Link>Replacer.cs</Link>
+    </Compile>
+    <Compile Include="CommandLine\Attributes\AssemblyLicenseAttribute.cs" />
+    <Compile Include="CommandLine\Attributes\AssemblyUsageAttribute.cs" />
+    <Compile Include="CommandLine\Attributes\BaseOptionAttribute.cs" />
+    <Compile Include="CommandLine\Attributes\HelpOptionAttribute.cs" />
+    <Compile Include="CommandLine\Attributes\HelpVerbOptionAttribute.cs" />
+    <Compile Include="CommandLine\Attributes\MultiLineTextAttribute.cs" />
+    <Compile Include="CommandLine\Attributes\OptionArrayAttribute.cs" />
+    <Compile Include="CommandLine\Attributes\OptionAttribute.cs" />
+    <Compile Include="CommandLine\Attributes\OptionListAttribute.cs" />
+    <Compile Include="CommandLine\Attributes\ParserStateAttribute.cs" />
+    <Compile Include="CommandLine\Attributes\ValueListAttribute.cs" />
+    <Compile Include="CommandLine\Attributes\ValueOptionAttribute.cs" />
+    <Compile Include="CommandLine\Attributes\VerbOptionAttribute.cs" />
+    <Compile Include="CommandLine\BadOptionInfo.cs" />
+    <Compile Include="CommandLine\Extensions\CharExtensions.cs" />
+    <Compile Include="CommandLine\Extensions\StringExtensions.cs" />
+    <Compile Include="CommandLine\GlobalSuppressions.cs" />
+    <Compile Include="CommandLine\Infrastructure\Assumes.cs" />
+    <Compile Include="CommandLine\Infrastructure\Pair.cs" />
+    <Compile Include="CommandLine\Infrastructure\PopsicleSetter.cs" />
+    <Compile Include="CommandLine\Infrastructure\ReflectionCache.cs" />
+    <Compile Include="CommandLine\Infrastructure\ReflectionHelper.cs" />
+    <Compile Include="CommandLine\Infrastructure\SR.strings.cs">
+      <DependentUpon>SR.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CommandLine\IParserState.cs" />
+    <Compile Include="CommandLine\Parser.cs" />
+    <Compile Include="CommandLine\ParserException.cs" />
+    <Compile Include="CommandLine\ParserSettings.cs" />
+    <Compile Include="CommandLine\ParserState.cs" />
+    <Compile Include="CommandLine\ParsingError.cs" />
+    <Compile Include="CommandLine\Parsing\ArgumentParser.cs" />
+    <Compile Include="CommandLine\Parsing\IArgumentEnumerator.cs" />
+    <Compile Include="CommandLine\Parsing\LongOptionParser.cs" />
+    <Compile Include="CommandLine\Parsing\OneCharStringEnumerator.cs" />
+    <Compile Include="CommandLine\Parsing\OptionGroupParser.cs" />
+    <Compile Include="CommandLine\Parsing\OptionInfo.cs" />
+    <Compile Include="CommandLine\Parsing\OptionMap.cs" />
+    <Compile Include="CommandLine\Parsing\PresentParserState.cs" />
+    <Compile Include="CommandLine\Parsing\PropertyWriter.cs" />
+    <Compile Include="CommandLine\Parsing\StringArrayEnumerator.cs" />
+    <Compile Include="CommandLine\Parsing\TargetCapabilitiesExtensions.cs" />
+    <Compile Include="CommandLine\Parsing\ValueMapper.cs" />
+    <Compile Include="CommandLine\Text\BaseSentenceBuilder.cs" />
+    <Compile Include="CommandLine\Text\CopyrightInfo.cs" />
+    <Compile Include="CommandLine\Text\EnglishSentenceBuilder.cs" />
+    <Compile Include="CommandLine\Text\FormatOptionHelpTextEventArgs.cs" />
+    <Compile Include="CommandLine\Text\HeadingInfo.cs" />
+    <Compile Include="CommandLine\Text\HelpText.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="CommandLine\CustomDictionary.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CommandLine\Infrastructure\SR.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SR.strings.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

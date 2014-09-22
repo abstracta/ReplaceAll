@@ -7,7 +7,7 @@ namespace Abstracta.ReplaceAll
 {
     public class Replacer
     {
-        public static bool ReeplaceInFile(string inputFile, string outputFile, string textToBeReplaced, string textToReplace, bool matchByRegex, bool textToReplaceIsTemplate)
+        public static bool ReeplaceInFile(string inputFile, string outputFile, string textToBeReplaced, string textToReplace, bool matchByRegex, bool textToReplaceIsTemplate, long fromLine = 0, long toLine = long.MaxValue)
         {
             // TODO : add support for other 'special caracters' 
             textToReplace = textToReplace.Replace("\\t", "\t");
@@ -24,22 +24,32 @@ namespace Abstracta.ReplaceAll
                 var tmpName = DateTime.Now - DateTime.MinValue;
                 outputFile = tmpName.TotalMilliseconds + "_tmpFile.log";
             }
-
+                
             var fileModified = false;
             using (var newFile = new StreamWriter(outputFile))
             {
                 using (var file = new StreamReader(inputFile))
                 {
+                    long i = 0;
                     string line;
                     while ((line = file.ReadLine()) != null)
                     {
-                        var newLine = matchByRegex
+                        if (fromLine <= i && i <= toLine)
+                        {
+                            var newLine = matchByRegex
                                 ? ReplaceUsingRegularExpression(line, textToBeReplaced, textToReplace, textToReplaceIsTemplate)
                                 : ReplaceUsingEqualsOperator(line, textToBeReplaced, textToReplace);
 
-                        newFile.WriteLine(newLine);
+                            newFile.WriteLine(newLine);
 
-                        fileModified = fileModified || newLine != line;
+                            fileModified = fileModified || newLine != line;
+                        }
+                        else
+                        {
+                            newFile.WriteLine(line);
+                        }
+
+                        i++;
                     }
                 }
             }

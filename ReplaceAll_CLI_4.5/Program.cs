@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using CommandLine;
 using CommandLine.Text;
 
@@ -32,6 +33,12 @@ namespace Abstracta.ReplaceAll
 
             [Option('w', "replaceWith", Required = true, HelpText = "Text that will replace the other text")]
             public string TextToReplace { get; set; }
+
+            [Option("fromLine", HelpText = "Replaces the lines starting at this line index. Default value = 0")]
+            public long FromLine { get; set; }
+
+            [Option("toLine", HelpText = "Replaces the lines until this line index. Default value = MAXLONG")]
+            public long ToLine { get; set; }
 
             [ParserState]
             public IParserState LastParserState { get; set; }
@@ -69,7 +76,21 @@ namespace Abstracta.ReplaceAll
                 options.OutputFile = options.DefaultOutputFile;
             }
 
-            var fileModified = Replacer.ReeplaceInFile(options.InputFile, options.OutputFile, options.TextToBeReplaced, options.TextToReplace, options.IsRegex, options.TextToReplaceIsTemplate);
+            long fromLine = 0;
+            if (args.Any(a => a == "--fromLine"))
+            {
+                fromLine = options.FromLine;
+            }
+
+            var toLine = long.MaxValue;
+            if (args.Any(a => a == "--toLine"))
+            {
+                toLine = options.ToLine;
+            }
+
+            var fileModified = Replacer.ReeplaceInFile(options.InputFile, options.OutputFile, options.TextToBeReplaced,
+                                                       options.TextToReplace, options.IsRegex,
+                                                       options.TextToReplaceIsTemplate, fromLine, toLine);
 
             if (fileModified)
             {

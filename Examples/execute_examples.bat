@@ -10,4 +10,6 @@ rem regex replacement
 %path%\Abstracta.ReplaceAll_NET4.0.exe -i example_03.log -x -r "(^\S+) (\[.*\]) (\S+) (\d+) (\d+$)" -w "\t" -o "res_e_01.log"
 %path%\Abstracta.ReplaceAll_NET4.0.exe -i example_04.log -x -r "(^\S+ )(\d\d)/(\d\d)/(\d\d\d\d .*$)" -t -w "$1$3/$2/$4" -o "res_e_02.log"
 
+%path%\Abstracta.ReplaceAll_NET4.0.exe -i example_04.log -x -r "(^\S+ )(\d\d)/(\d\d)/(\d\d\d\d .*$)" -t -w "$1$3/$2/$4" -o "res_e_03.log" --fromLine 2 --toLine 3
+
 pause

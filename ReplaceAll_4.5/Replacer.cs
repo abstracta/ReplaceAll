@@ -2,6 +2,7 @@
 using System;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Threading;
 
 namespace Abstracta.ReplaceAll
 {
@@ -25,6 +26,16 @@ namespace Abstracta.ReplaceAll
                 outputFile = tmpName.TotalMilliseconds + "_tmpFile.log";
             }
                 
+            if (File.Exists(outputFile))
+            {
+                while (File.Exists(outputFile))
+                {
+                    Thread.Sleep(5);
+                    var tmpName = DateTime.Now - DateTime.MinValue;
+                    outputFile = tmpName.TotalMilliseconds + "_tmpFile.log";
+                } 
+            }
+
             var fileModified = false;
             using (var newFile = new StreamWriter(outputFile))
             {
